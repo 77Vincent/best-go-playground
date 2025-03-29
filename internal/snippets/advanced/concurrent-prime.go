@@ -1,4 +1,4 @@
-package fun
+package advanced
 
 const ConcurrentPrime = `package main
 

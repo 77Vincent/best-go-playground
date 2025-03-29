@@ -8,8 +8,10 @@ log:
 exec:
 	docker exec -it go-sandbox-server /bin/sh
 server:
-	docker-compose up --build -d
+	docker-compose up -d
+build:
+	docker-compose build server
 down:
 	docker-compose down --volumes --remove-orphans
 
-.PHONY: client server down
+.PHONY: client server down build

@@ -101,7 +101,7 @@ function FetchErrorMessage(props: {
     )
 }
 
-const resizeHandlerHoverClasses = "hover:bg-cyan-400 transition-colors duration-300";
+const resizeHandlerHoverClasses = "z-10 hover:bg-cyan-500 transition-colors";
 
 export default function Component(props: {
     setToastError: (message: ReactNode) => void

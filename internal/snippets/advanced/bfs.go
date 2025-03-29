@@ -1,4 +1,4 @@
-package problems
+package advanced
 
 const Bfs = `package main
 

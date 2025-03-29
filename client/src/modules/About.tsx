@@ -30,10 +30,11 @@ export default function Component(props: {
 
                 <div className={"text-lg font-semibold italic"}>Key Features</div>
                 <ul className={"list-inside list-disc indent-4"}>
-                    <li>Automatic and realtime code execution</li>
-                    <li>Syntax highlighting and linting</li>
-                    <li>Share your code snippet</li>
-                    <li>Rich code snippet library</li>
+                    <li>Automatic and realtime execution</li>
+                    <li>Syntax recognition</li>
+                    <li>Multiple sandboxes</li>
+                    <li>Share code snippet</li>
+                    <li>Rich snippet library</li>
                 </ul>
 
                 <Divider horizontal={true}/>
@@ -66,10 +67,10 @@ export default function Component(props: {
                         as={Link}
                         gradientMonochrome={"teal"}
                         className={"hover:opacity-80"}
-                        to={"https://github.com/77Vincent/go-sandbox"} target={"_blank"}>
+                        to={"https://github.com/77Vincent/go-sandbox/issues"} target={"_blank"}>
                     <div className={"flex items-center gap-2"}>
                         <FaGithub size={20}/>
-                        GitHub
+                        Report Issues
                     </div>
                 </Button>
             </div>

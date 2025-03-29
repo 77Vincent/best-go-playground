@@ -252,7 +252,7 @@ func stream(r io.ReadCloser, event string, c *gin.Context, wg *sync.WaitGroup, l
 		b := buf[0]
 
 		switch b {
-		case '\n':
+		case '\r', '\n':
 			send(line, event, c, lock)
 			line = []byte{} // reset
 		case '\x0c':

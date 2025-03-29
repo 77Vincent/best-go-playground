@@ -2,10 +2,9 @@ package handlers
 
 import (
 	"github.com/gin-gonic/gin"
+	"github.com/tianqi-wen_frgr/go-sandbox/internal/snippets/advanced"
 	"github.com/tianqi-wen_frgr/go-sandbox/internal/snippets/basic"
 	"github.com/tianqi-wen_frgr/go-sandbox/internal/snippets/design_pattern"
-	"github.com/tianqi-wen_frgr/go-sandbox/internal/snippets/fun"
-	"github.com/tianqi-wen_frgr/go-sandbox/internal/snippets/problems"
 	"net/http"
 )
 
@@ -24,18 +23,21 @@ const (
 	jsonCase          = "json"
 	mutexCase         = "mutex"
 	tickerCase        = "ticker"
-	// problems
-	fibonacciCase    = "fibonacci"
-	quickSortCase    = "quickSort"
-	mergeSortCase    = "mergeSort"
-	binarySearchCase = "binarySearch"
-	bfsCase          = "bfs"
-	dfsCase          = "dfs"
-	// fun
-	clearScreenCase     = "clearScreen"
-	httpServerCase      = "httpServer"
-	gameOfLifeCase      = "gameOfLife"
-	concurrentPrimeCase = "concurrentPrime"
+	// advanced
+	fibonacciCase         = "fibonacci"
+	progressBarCase       = "progressBar"
+	quickSortCase         = "quickSort"
+	mergeSortCase         = "mergeSort"
+	binarySearchCase      = "binarySearch"
+	bfsCase               = "bfs"
+	dfsCase               = "dfs"
+	lruCase               = "lru"
+	lcsCase               = "lcs"
+	spinner               = "spinner"
+	httpServerCase        = "httpServer"
+	gameOfLifeCase        = "gameOfLife"
+	concurrentPrimeCase   = "concurrentPrime"
+	diningPhilosopherCase = "diningPhilosophers"
 	// design patterns
 	singletonCase = "singleton"
 	factoryCase   = "factory"
@@ -78,29 +80,35 @@ func GetTemplate(c *gin.Context) {
 	case tickerCase:
 		output = basic.Ticker
 
-	// problems
-	case fibonacciCase:
-		output = problems.Fibonacci
-	case quickSortCase:
-		output = problems.QuickSort
-	case mergeSortCase:
-		output = problems.MergeSort
-	case binarySearchCase:
-		output = problems.BinarySearch
-	case bfsCase:
-		output = problems.Bfs
-	case dfsCase:
-		output = problems.Dfs
-
-	// fun
-	case clearScreenCase:
-		output = fun.ClearScreen
+	// advanced
+	case spinner:
+		output = advanced.Spinner
+	case progressBarCase:
+		output = advanced.ProgressBar
 	case httpServerCase:
-		output = fun.HttpServer
+		output = advanced.HttpServer
 	case gameOfLifeCase:
-		output = fun.GameOfLife
+		output = advanced.GameOfLife
 	case concurrentPrimeCase:
-		output = fun.ConcurrentPrime
+		output = advanced.ConcurrentPrime
+	case diningPhilosopherCase:
+		output = advanced.DiningPhilosopher
+	case fibonacciCase:
+		output = advanced.Fibonacci
+	case quickSortCase:
+		output = advanced.QuickSort
+	case mergeSortCase:
+		output = advanced.MergeSort
+	case binarySearchCase:
+		output = advanced.BinarySearch
+	case bfsCase:
+		output = advanced.Bfs
+	case dfsCase:
+		output = advanced.Dfs
+	case lruCase:
+		output = advanced.LRU
+	case lcsCase:
+		output = advanced.LCS
 
 	// design patterns
 	case singletonCase:

@@ -1,4 +1,4 @@
-package problems
+package advanced
 
 const MergeSort = `package main
 
